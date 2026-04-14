@@ -71,10 +71,19 @@
                     <h1 class="text-2xl font-bold text-gray-800">Giám sát vận hành kết nối</h1>
                     <p class="text-gray-500 text-sm">Quản lý thiết bị và các gói cước Starlink mới nhất 2026</p>
                 </div>
-                <div class="flex bg-white border rounded-lg p-1 shadow-sm">
-                    <button class="px-4 py-1.5 text-sm font-medium text-gray-600 hover:bg-gray-50 rounded-md">Xuất Excel</button>
-                    <button class="px-4 py-1.5 text-sm font-medium bg-red-50 text-viettel-red rounded-md">Hôm nay</button>
-                    <button class="px-4 py-1.5 text-sm font-medium text-gray-600 hover:bg-gray-50 rounded-md">7 ngày trước</button>
+                <!-- Nhóm chức năng: Lọc và Xuất file -->
+                <div class="flex items-center gap-3">
+                    <!-- Nút Xuất Excel riêng biệt -->
+                    <button class="flex items-center gap-2 px-4 py-2 bg-white border border-emerald-200 text-emerald-600 rounded-lg text-sm font-bold shadow-sm hover:bg-emerald-50 hover:border-emerald-500 transition-all">
+                        <i class="fas fa-file-excel"></i>
+                        <span>Xuất Excel</span>
+                    </button>
+
+                    <!-- Cụm nút lọc thời gian -->
+                    <div class="flex bg-white border border-gray-200 rounded-lg p-1 shadow-sm">
+                        <button class="px-4 py-1.5 text-sm font-medium bg-red-50 text-viettel-red rounded-md">Hôm nay</button>
+                        <button class="px-4 py-1.5 text-sm font-medium text-gray-500 hover:bg-gray-50 rounded-md">7 ngày trước</button>
+                    </div>
                 </div>
             </div>
 
@@ -319,9 +328,13 @@
                     <h1 class="text-2xl font-bold text-gray-900">Quản lý Bán hàng & Onboarding</h1>
                     <p class="text-gray-600">Đăng ký mới, cấp phát thiết bị và theo dõi tiến độ lắp đặt.</p>
                 </div>
-                <button onclick="openOrderModal()" class="bg-viettel-red text-white px-6 py-2 rounded-lg font-bold shadow-lg shadow-red-200 hover:bg-red-700 transition">
-                    <i class="fas fa-plus mr-2"></i>HỢP ĐỒNG MỚI
-                </button>
+                <div class="flex items-center gap-3">
+                    <!-- Nút Xuất Excel riêng biệt -->
+                    <button class="flex items-center gap-2 px-4 py-2 bg-white border border-emerald-200 text-emerald-600 rounded-lg text-sm font-bold shadow-sm hover:bg-emerald-50 hover:border-emerald-500 transition-all">
+                        <i class="fas fa-file-excel"></i>
+                        <span>Xuất Excel</span>
+                    </button>                                  
+                </div>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
@@ -409,8 +422,9 @@
              <div class="mb-8">
                 <h1 class="text-2xl font-bold text-gray-900">Quản lý Gia hạn & Gói cước</h1>
                 <p class="text-gray-600">Gia hạn nhanh chóng và chuyển đổi gói cước Starlink linh hoạt.</p>
+                
             </div>
-
+            
             <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
                 <!-- Bộ lọc & Danh sách -->
                 <div class="lg:col-span-3 space-y-6">
